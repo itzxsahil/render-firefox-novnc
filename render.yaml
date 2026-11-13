@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: url-firefox
+    runtime: docker
+    envVars:
+      - key: START_URL
+        value: https://www.google.com
+      - key: VNC_PASSWORD
+        sync: false
