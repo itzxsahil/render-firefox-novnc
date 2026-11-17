@@ -12,56 +12,41 @@
 
 ---
 
-## 🎬 Video Tutorial & Interactive Walkthrough
+## 📸 Project Preview
 
 <div align="center">
-  <a href="https://www.youtube.com/results?search_query=itzxsahil+render+firefox+novnc">
-    <img src="assets/tutorial-showcase.svg" width="100%" alt="Video Tutorial Showcase" style="border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
-  </a>
-  <p><em>▶️ <strong>Interactive Project Tutorial</strong> — Click the player above to watch full setup guide &amp; demonstration!</em></p>
+  <img src="assets/project-banner.svg" width="100%" alt="Project Preview" style="border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);" />
 </div>
 
 ---
 
 # 🚀 Overview
 
-Run a production-ready, secure instance of **Mozilla Firefox** directly in any web browser over **noVNC** and WebSockets, tailored for continuous execution on **Render** and **Railway**.
+Run a production-ready, secure instance of **Mozilla Firefox** directly in any web browser over **noVNC** and WebSockets, tailored for continuous cloud execution on **Render** and **Railway**.
 
 ---
 
-## 🏗️ System Architecture & Data Flow
+# 🏗️ System Architecture & Data Flow
 
 <div align="center">
-  <img src="assets/architecture.svg" width="100%" alt="Architecture Diagram" style="border-radius: 12px;" />
+  <img src="assets/architecture.svg" width="100%" alt="Architecture Diagram" style="border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.4);" />
 </div>
 
 <br>
 
-The web browser connects to **noVNC** over HTTP/WebSockets, proxying RFB packets to the local **x11vnc** server attached to display `:1`, running native Mozilla Firefox inside an Xvfb virtual frame buffer.
+The client web browser communicates over WebSockets with **websockify**, forwarding RFB graphical display protocols to **x11vnc** which renders native Mozilla Firefox inside an isolated Xvfb display buffer.
 
 ---
 
 # ✨ Features
 
-✅ **Zero IPv6 DNS Hangs**: Prefers IPv4 DNS by default to prevent silent connection dropouts in cloud containers.\n✅ **Resource Friendly**: Optimized Fluxbox + Xvfb display consuming minimal RAM.\n✅ **VNC Password Authentication**: Enforces secure access via `VNC_PASSWORD`.\n✅ **Dynamic Port Support**: Works automatically with Render's assigned `$PORT`.
+✅ **Zero IPv6 DNS Hangs**: Prefers IPv4 DNS by default to prevent connection dropouts in cloud containers.\n✅ **Resource Friendly**: Optimized Fluxbox + Xvfb display consuming minimal RAM.\n✅ **VNC Password Authentication**: Enforces secure access via `VNC_PASSWORD`.\n✅ **Dynamic Port Support**: Works automatically with Render's assigned `$PORT`.
 
 ---
 
 # 📦 Installation & Quickstart
 
-### One-Click Cloud Deploy
-[![Deploy to Render](https://render.com/images/deploy-to-render.svg)](https://render.com)
-
-Set environment variables in Render:
-- `VNC_PASSWORD`: Set your custom access password.
-- `START_URL`: Default homepage (e.g. `https://www.google.com`).
-
-### Local Docker Run
-```bash
-docker build -t render-firefox-novnc .
-docker run -p 10000:10000 -e VNC_PASSWORD="yourpassword" render-firefox-novnc
-```
-Visit `http://localhost:10000/vnc.html` in your web browser.
+### Cloud Deployment (Render)\n[![Deploy to Render](https://render.com/images/deploy-to-render.svg)](https://render.com)\n\nSet environment variables in Render:\n- `VNC_PASSWORD`: Set your custom password.\n- `START_URL`: Default homepage (e.g. `https://www.google.com`).\n\n### Local Docker Run\n```bash\ndocker build -t render-firefox-novnc .\ndocker run -p 10000:10000 -e VNC_PASSWORD="yourpassword" render-firefox-novnc\n```\nVisit `http://localhost:10000/vnc.html` in your browser.
 
 ---
 
