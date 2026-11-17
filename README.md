@@ -14,9 +14,9 @@
 
 ## 📸 Project Preview
 
-<div align="center">
-  <img src="assets/project-banner.svg" width="100%" alt="Project Preview" style="border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.5);" />
-</div>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/itzxsahil/render-firefox-novnc/main/assets/project-banner.svg" width="100%" alt="Project Preview" />
+</p>
 
 ---
 
@@ -28,9 +28,9 @@ Run a production-ready, secure instance of **Mozilla Firefox** directly in any w
 
 # 🏗️ System Architecture & Data Flow
 
-<div align="center">
-  <img src="assets/architecture.svg" width="100%" alt="Architecture Diagram" style="border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.4);" />
-</div>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/itzxsahil/render-firefox-novnc/main/assets/architecture.svg" width="100%" alt="System Architecture &amp; Data Flow" />
+</p>
 
 <br>
 
