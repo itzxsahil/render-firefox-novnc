@@ -5,23 +5,15 @@
       <stop offset="100%" stop-color="#161B22" />
     </linearGradient>
   </defs>
-
-  <!-- Terminal Frame -->
   <rect width="900" height="270" rx="14" fill="url(#termBg)" stroke="#30363D" stroke-width="1.5"/>
-
-  <!-- Top Bar -->
   <rect width="900" height="38" rx="14" fill="#1C2128"/>
   <rect y="24" width="900" height="14" fill="#1C2128"/>
   <circle cx="22" cy="19" r="6" fill="#FF5F56"/>
   <circle cx="40" cy="19" r="6" fill="#FFBD2E"/>
   <circle cx="58" cy="19" r="6" fill="#27C93F"/>
-  <text x="450" y="24" fill="#8B949E" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">🦊 Render Firefox noVNC Desktop • Interactive Preview</text>
-
-  <!-- Status Pill -->
+  <text x="450" y="24" fill="#8B949E" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="600" text-anchor="middle">🦊 Render Firefox noVNC Desktop • Live Preview</text>
   <rect x="750" y="10" width="130" height="18" rx="9" fill="#21262D" stroke="#FF7139" stroke-width="1"/>
   <text x="815" y="22" fill="#FF7139" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="9" font-weight="bold" text-anchor="middle">BROWSER CLOUD CONTAINER</text>
-
-  <!-- Terminal Content Lines -->
   <g transform="translate(15, 10)">
     <text x="25" y="70" fill="#FF7139" font-family="'Fira Code', monospace" font-size="13">$ docker run -p 10000:10000 -e VNC_PASSWORD=*** render-firefox-novnc</text>
 <text x="25" y="96" fill="#C9D1D9" font-family="'Fira Code', monospace" font-size="13">[SYSTEM] Initializing virtual frame buffer Xvfb on display :1</text>
