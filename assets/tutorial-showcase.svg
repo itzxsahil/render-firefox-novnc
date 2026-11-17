@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="100%" height="450">
+  <defs>
+    <linearGradient id="playerBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0B0E14" />
+      <stop offset="100%" stop-color="#161B22" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Video Window Frame -->
+  <rect width="900" height="450" rx="16" fill="url(#playerBg)" stroke="#30363D" stroke-width="2"/>
+
+  <!-- Window Header -->
+  <rect width="900" height="44" rx="16" fill="#1C2128"/>
+  <rect y="30" width="900" height="14" fill="#1C2128"/>
+  <circle cx="25" cy="22" r="6" fill="#FF5F56"/>
+  <circle cx="45" cy="22" r="6" fill="#FFBD2E"/>
+  <circle cx="65" cy="22" r="6" fill="#27C93F"/>
+  <text x="450" y="27" fill="#8B949E" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" text-anchor="middle">🎬 Tutorial: Deploy Firefox with noVNC on Render in 3 Minutes</text>
+
+  <!-- Video Screen Mockup -->
+  <g transform="translate(40, 65)">
+    <!-- Terminal / Screen Simulation -->
+    <rect width="820" height="300" rx="10" fill="#0D1117" stroke="#21262D" stroke-width="1.5"/>
+    
+    <!-- Code / Output Preview Lines -->
+    <text x="25" y="40" fill="#FF7139" font-family="'Fira Code', monospace" font-size="14" font-weight="bold">$ render-firefox-novnc-desktop</text>
+    <text x="25" y="70" fill="#58A6FF" font-family="'Fira Code', monospace" font-size="13">[INFO] Initializing project modules and dependencies...</text>
+    <text x="25" y="95" fill="#3FB950" font-family="'Fira Code', monospace" font-size="13">[SUCCESS] Environment verified • WebSocket &amp; Service bound</text>
+    <text x="25" y="120" fill="#E6EDF3" font-family="'Fira Code', monospace" font-size="13">[READY] Target live at https://github.com/itzxsahil</text>
+    <text x="25" y="150" fill="#8B949E" font-family="'Fira Code', monospace" font-size="12">--- Step 1: Clone and configure environment variables</text>
+    <text x="25" y="175" fill="#8B949E" font-family="'Fira Code', monospace" font-size="12">--- Step 2: One-click Docker container deployment verified</text>
+    <text x="25" y="200" fill="#8B949E" font-family="'Fira Code', monospace" font-size="12">--- Step 3: Interactive execution and real-time monitoring active</text>
+    
+    <!-- Center Play Button with Glow -->
+    <g transform="translate(410, 150)" cursor="pointer">
+      <circle cx="0" cy="0" r="42" fill="#FF7139" filter="url(#glow)" opacity="0.9"/>
+      <circle cx="0" cy="0" r="38" fill="#FF7139"/>
+      <polygon points="-10,-18 20,0 -10,18" fill="#FFFFFF"/>
+    </g>
+
+    <text x="410" y="220" fill="#FFFFFF" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">WATCH STEP-BY-STEP TUTORIAL</text>
+  </g>
+
+  <!-- Bottom Player Control Bar -->
+  <g transform="translate(40, 390)">
+    <!-- Progress Bar -->
+    <rect width="820" height="6" rx="3" fill="#30363D"/>
+    <rect width="360" height="6" rx="3" fill="#FF7139"/>
+    <circle cx="360" cy="3" r="7" fill="#FFFFFF"/>
+
+    <!-- Player Controls -->
+    <text x="10" y="32" fill="#E6EDF3" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="13">▶  ❚❚  06:24 / 12:45</text>
+    <rect x="730" y="18" width="40" height="18" rx="4" fill="#21262D" stroke="#30363D" stroke-width="1"/>
+    <text x="750" y="31" fill="#58A6FF" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">1080p</text>
+    <text x="795" y="32" fill="#E6EDF3" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="14">⛶</text>
+  </g>
+</svg>
